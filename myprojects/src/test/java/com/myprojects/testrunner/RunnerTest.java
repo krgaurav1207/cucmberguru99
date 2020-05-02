@@ -13,7 +13,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class) 
 
 @CucumberOptions(
-		 features = "src/test//java//testfeature//Guru99Login.feature"
+		 features = "src//test//java//testfeature//Guru99Login.feature"
 		 ,glue={"com.myprojects.stepdefination"},
 				plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}, 
 			        monochrome = true
@@ -21,7 +21,7 @@ import cucumber.api.junit.Cucumber;
 public class RunnerTest {
 	 @AfterClass
 	    public static void writeExtentReport() {
-	        Reporter.loadXMLConfig(new File("//myprojects//ConfigurationFiles//report.xml"));
+	        Reporter.loadXMLConfig(new File("ConfigurationFiles//report.xml"));
 }
 }
 
