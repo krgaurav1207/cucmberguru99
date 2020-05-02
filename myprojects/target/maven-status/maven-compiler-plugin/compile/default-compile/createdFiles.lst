@@ -1,0 +1,7 @@
+com\myprojects\pageobjects\Guru99LoginPageObjects.class
+com\myprojects\pageobjects\Guru99AddCustomerPageObjects.class
+com\myprojects\utilities\CoreMethods.class
+com\myprojects\utilities\Driver.class
+com\myprojects\utilities\DriverFactory.class
+com\myprojects\myprojects\App.class
+com\myprojects\utilities\ReadExcelSheetData.class
