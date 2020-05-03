@@ -17,7 +17,10 @@ import cucumber.api.junit.Cucumber;
 		 ,glue={"com.myprojects.stepdefination"},
 				plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}, 
 			        monochrome = true,
-			        tags= {"@InvalidUserID"}
+			        		tags= {"@InvalidUserID"}
+//		 multiple tags can be passed as
+//			        tags= {"@InvalidUserID,@InvalidUserIDPassword"}
+			        		
 		 )
 public class RunnerTest {
 	 @AfterClass
