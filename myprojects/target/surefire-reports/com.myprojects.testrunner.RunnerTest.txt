@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.myprojects.testrunner.RunnerTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.216 sec
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.42 sec
