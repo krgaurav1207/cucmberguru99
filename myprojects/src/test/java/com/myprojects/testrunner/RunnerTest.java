@@ -13,10 +13,11 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class) 
 
 @CucumberOptions(
-		 features = "src//test//java//testfeature//Login.feature"
+		 features = "src//test//java//FeatureFiles"
 		 ,glue={"com.myprojects.stepdefination"},
 				plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"}, 
-			        monochrome = true
+			        monochrome = true,
+			        tags= {"@InvalidUserID"}
 		 )
 public class RunnerTest {
 	 @AfterClass

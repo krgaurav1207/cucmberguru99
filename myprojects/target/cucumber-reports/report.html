@@ -52,7 +52,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>May 3, 2020 09:39:37 AM</span>
+                    <span class='label suite-start-time blue darken-3'>May 3, 2020 10:44:05 AM</span>
 				</a>
 			</li>
 			<li>
@@ -91,10 +91,7 @@
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@Login</a></li>
-					<li><a href='#'>@SuccessfullLogin</a></li>
 					<li><a href='#'>@InvalidUserID</a></li>
-					<li><a href='#'>@InvalidPassword</a></li>
-					<li><a href='#'>@InvalidUserIDPassword</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -157,7 +154,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -172,7 +169,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>12</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -192,15 +189,15 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Test the login functionality of Guru99 site</span>
-						<span class='test-time'>May 3, 2020 09:39:37 AM</span>
+						<span class='test-time'>May 3, 2020 10:44:05 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='scenario node' test-id='2' status='pass'>
 	<div class='category-list'>
-		<span class='category label white-text'>@SuccessfullLogin</span>
+		<span class='category label white-text'>@InvalidUserID</span>
 	</div>
-	<span class='duration right label'>0h 0m 18s+383ms</span>
+	<span class='duration right label'>0h 0m 14s+541ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">The user should be able to login with correct userid and password</span>
@@ -218,119 +215,11 @@
 			
 			<b>When</b>
 			
-			<span class="bdd-step-name">When user enters correct username and password</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='5' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then user should be able to login</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='6' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@InvalidUserID</span>
-	</div>
-	<span class='duration right label'>0h 0m 3s+431ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">The user should be able to login with correct userid and password</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='7' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given user is on Login Page</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='8' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
 			<span class="bdd-step-name">When user enters invalid userid and password</span>
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='9' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then Error alert should be given</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='10' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@InvalidPassword</span>
-	</div>
-	<span class='duration right label'>0h 0m 3s+758ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">The user should be able to login with correct userid and password</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='11' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given user is on Login Page</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='12' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When user enters userid and invalid password</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='13' class='node then pass' status='pass'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then Error alert should be given</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-	</ul>
-</div>
-<div class='scenario node' test-id='14' status='pass'>
-	<div class='category-list'>
-		<span class='category label white-text'>@InvalidUserIDPassword</span>
-	</div>
-	<span class='duration right label'>0h 0m 6s+979ms</span>
-	<div class='desc'>
-		<b>Scenario</b>
-		<span class="desc-text">The user should be able to login with correct userid and password</span>
-	</div>
-	<ul class='steps'>
-		<li test-id='15' class='node given pass' status='pass'>
-			
-			<b>Given</b>
-			
-			<span class="bdd-step-name">Given user is on Login Page</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='16' class='node when pass' status='pass'>
-			
-			<b>When</b>
-			
-			<span class="bdd-step-name">When user enters invalid userid and invalid password</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='17' class='node then pass' status='pass'>
+		<li test-id='5' class='node then pass' status='pass'>
 			
 			<b>Then</b>
 			
@@ -417,42 +306,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 3, 2020 09:39:37 AM</td>
+										<td>May 3, 2020 10:44:05 AM</td>
 										<td class='linked' test-id='1'>Test the login functionality of Guru99 site</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@SuccessfullLogin</span>
-						<span class='category-status right'>
-							<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>May 3, 2020 09:39:37 AM</td>
-										<td class='linked' test-id='2'>Test the login functionality of Guru99 site.The user should be able to login with correct userid and password</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -485,76 +340,8 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>May 3, 2020 09:39:55 AM</td>
-										<td class='linked' test-id='6'>Test the login functionality of Guru99 site.The user should be able to login with correct userid and password</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@InvalidPassword</span>
-						<span class='category-status right'>
-							<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>May 3, 2020 09:39:59 AM</td>
-										<td class='linked' test-id='10'>Test the login functionality of Guru99 site.The user should be able to login with correct userid and password</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-				<li class='category displayed active'>
-					<div class='category-heading'>
-						<span class='category-name'>@InvalidUserIDPassword</span>
-						<span class='category-status right'>
-							<span class='label pass'>1</span>
-						</span>
-					</div>
-					<div class='category-content hide'>
-						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
-							
-							
-						</div>
-					
-						<div class='category-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>May 3, 2020 09:40:02 AM</td>
-										<td class='linked' test-id='14'>Test the login functionality of Guru99 site.The user should be able to login with correct userid and password</td>
+										<td>May 3, 2020 10:44:05 AM</td>
+										<td class='linked' test-id='2'>Test the login functionality of Guru99 site.The user should be able to login with correct userid and password</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -589,31 +376,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>4</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>12</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>May 3, 2020 09:39:37 AM</div>
+					<div class='panel-lead'>May 3, 2020 10:44:05 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>May 3, 2020 09:40:10 AM</div>
+			 		<div class='panel-lead'>May 3, 2020 10:44:20 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>33,771ms</div>
+					<div class='panel-lead'>14,758ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -638,34 +425,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td>@SuccessfullLogin</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
 							<td>@InvalidUserID</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@InvalidPassword</td>
-							<td>1</td>
-							<td>0</td>
-							<td>0</td>
-							<td>
-									100%
-							</td>
-						</tr>
-						<tr>
-							<td>@InvalidUserIDPassword</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -694,7 +454,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 4,
+				passChild: 1,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -703,7 +463,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 12,
+				passGrandChild: 3,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
