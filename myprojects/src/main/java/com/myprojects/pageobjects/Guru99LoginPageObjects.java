@@ -1,5 +1,6 @@
 package com.myprojects.pageobjects;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -70,4 +71,32 @@ public class Guru99LoginPageObjects {
 		}
 		
 	}
+	
+	public void ErrorWindow() {
+		Alert simpleAlert=driver.switchTo().alert();
+		simpleAlert.accept();
+	}
+	
+	public  void invalidUserName() {
+		try {
+			driver.findElement(By.name("uid")).sendKeys("Invalid");
+		}
+		catch(Exception e) {
+			e.printStackTrace(System.out);
+		}
+		
+	}
+
+	public  void invalidPassword() {
+		try {
+			driver.findElement(By.name("password")).sendKeys("Invalid");
+		}
+		catch(Exception e) {
+			e.printStackTrace(System.out);
+		}
+		
+	}
+	
+	
+	
 }
