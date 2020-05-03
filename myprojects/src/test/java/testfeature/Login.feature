@@ -4,7 +4,7 @@ Feature: Test the login functionality of Guru99 site
   @SuccessfullLogin
   Scenario: The user should be able to login with correct userid and password
     Given user is on Login Page
-    When user enters correct userid and password
+    When user enters correct username and password
     Then user should be able to login
 
  @InvalidUserID

@@ -57,6 +57,5 @@ public class Guru99LoginStepDefination {
 	public void Error_alert_should_be_given() {
 		LoginPageObj.Login();
 		LoginPageObj.ErrorWindow();
-		driver.close();
 	}
 }
