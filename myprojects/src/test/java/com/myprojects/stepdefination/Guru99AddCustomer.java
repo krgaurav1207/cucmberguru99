@@ -3,12 +3,12 @@ package com.myprojects.stepdefination;
 import org.openqa.selenium.WebDriver;
 
 import com.myprojects.pageobjects.Guru99AddCustomerPageObjects;
-import com.myprojects.utilities.Driver;
+import com.myprojects.utilities.CoreMethods;
 
 import cucumber.api.java.en.Then;
 
 public class Guru99AddCustomer {
-	WebDriver driver = Driver.getInstance();
+	WebDriver driver = CoreMethods.getInstance();
 	Guru99AddCustomerPageObjects AddCustomerObj = new Guru99AddCustomerPageObjects(driver);
 
 	@Then("^user click on New Customer$")
@@ -43,6 +43,7 @@ public class Guru99AddCustomer {
 		boolean returnFlag = AddCustomerObj.verifyNewCustomerCreation();
 		if(returnFlag) {
 			System.out.println("Success : New Customer is added");
+			System.out.println("Customer ID:" + Guru99AddCustomerPageObjects.customerID);
 		}
 		else {
 			System.out.println("Failed : New Customer Page is not added");

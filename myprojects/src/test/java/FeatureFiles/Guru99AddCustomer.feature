@@ -1,6 +1,6 @@
 Feature:  Test the Add new customer functionality of Guru99 site
  
-  @tag1
+  @AddCustomer
   Scenario: The user should be able to login with correct username and password
        Given user is on Login Page
     When user enters correct username and password

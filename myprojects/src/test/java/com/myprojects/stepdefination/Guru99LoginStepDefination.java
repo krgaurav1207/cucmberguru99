@@ -4,17 +4,16 @@ import org.openqa.selenium.WebDriver;
 
 import com.myprojects.pageobjects.Guru99LoginPageObjects;
 import com.myprojects.utilities.CoreMethods;
-import com.myprojects.utilities.Driver;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Guru99LoginStepDefination {
-	WebDriver driver = Driver.getInstance();
+	WebDriver driver = CoreMethods.getInstance();
 	Guru99LoginPageObjects LoginPageObj = new Guru99LoginPageObjects(driver);
 	@Given("^user is on Login Page$")
 	public void user_is_on_Login_Page() throws Throwable {
-		WebDriver driver = Driver.getInstance();
+		WebDriver driver = CoreMethods.getInstance();
 		 		 CoreMethods.launchURL(driver);
 		 		LoginPageObj.getLoginPageTitle();
 	}

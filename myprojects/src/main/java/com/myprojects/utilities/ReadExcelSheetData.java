@@ -9,9 +9,9 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ReadExcelSheetData {
+public class ReadExcelSheetData extends CoreMethods{
 	public static Map<String,  Map<String, String>> setMapData() throws IOException {
-		String path = "E:\\New folder\\myprojects\\src\\test\\java\\TestDataRepository\\TestData.xlsx";
+		String path = "src//test//java//TestDataRepository//TestData.xlsx";
 		FileInputStream fis = new FileInputStream(path);
 		Workbook workbook = new XSSFWorkbook(fis);
 		Sheet sheet = workbook.getSheetAt(0);

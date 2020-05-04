@@ -3,12 +3,15 @@ package com.myprojects.pageobjects;
 import java.io.IOException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
+import com.myprojects.utilities.CoreMethods;
 import com.myprojects.utilities.ReadExcelSheetData;
 
 public class Guru99AddCustomerPageObjects extends ReadExcelSheetData{
-	static WebDriver driver;
+	WebDriver driver;
+	public static String customerID;
 	 public Guru99AddCustomerPageObjects(WebDriver driver) {
 		 this.driver =driver;
 	 }
@@ -39,8 +42,7 @@ public class Guru99AddCustomerPageObjects extends ReadExcelSheetData{
 	}
 
 	public void EnterCustomerEmailId(WebDriver driver) throws Throwable {
-		String CustomerEmailId = ReadExcelSheetData.getMapData("CustomerEmailId");
-		driver.findElement(By.xpath("//input[@name='emailid']")).sendKeys(CustomerEmailId);
+		driver.findElement(By.xpath("//input[@name='emailid']")).sendKeys(CoreMethods.randomCharacter(10, "yes", "no")+"@test.com");
 	}
 	public void EnterCustomerMobileNumber(WebDriver driver) throws Throwable {
 		String CustomerMobileNumber = ReadExcelSheetData.getMapData("CustomerMobileNumber");
@@ -68,7 +70,10 @@ public class Guru99AddCustomerPageObjects extends ReadExcelSheetData{
 
 	public void SelectCustomerDateOfBirth(WebDriver driver) throws Throwable {
 		String CustomerDOB = ReadExcelSheetData.getMapData("CustomerDateOfBirth");
-		driver.findElement(By.xpath("//input[@name='dob']")).sendKeys(CustomerDOB);
+		driver.findElement(By.xpath("//input[@name='dob']")).sendKeys(CustomerDOB.substring(0, 4));
+		driver.findElement(By.xpath("//input[@name='dob']")).sendKeys(Keys.TAB);
+		driver.findElement(By.xpath("//input[@name='dob']")).sendKeys(CustomerDOB.substring(4));
+		CoreMethods.handleAlert("No Alert found at entering date for Add Customer.");
 	}
 
 	public void SelectCustomerGender(WebDriver driver) throws Throwable {
@@ -93,6 +98,7 @@ public class Guru99AddCustomerPageObjects extends ReadExcelSheetData{
 	public boolean verifyNewCustomerCreation() {
 		String ExpectedText = driver.findElement(By.xpath("//p[@class='heading3']")).getText();
 		if (ExpectedText.equalsIgnoreCase("Customer Registered Successfully!!!")) {
+			customerID=driver.findElement(By.xpath("//*[@id=\"customer\"]/tbody/tr[4]/td[2]")).getText();
 			return true;
 		} else {
 			return false;
