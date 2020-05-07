@@ -1,17 +1,21 @@
 package com.myprojects.pageobjects;
 
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.myprojects.utilities.CoreMethods;
 import com.myprojects.utilities.ReadExcelSheetData;
 
 public class Guru99AddCustomerPageObjects extends ReadExcelSheetData{
 	WebDriver driver;
-	public static String customerID;
+	public static String customerID=null;
 	 public Guru99AddCustomerPageObjects(WebDriver driver) {
 		 this.driver =driver;
 	 }
@@ -95,8 +99,12 @@ public class Guru99AddCustomerPageObjects extends ReadExcelSheetData{
 		driver.findElement(By.xpath("//input[@value='Submit']")).click();
 	}
 
-	public boolean verifyNewCustomerCreation() {
-		String ExpectedText = driver.findElement(By.xpath("//p[@class='heading3']")).getText();
+	public boolean verifyNewCustomerCreation() throws InterruptedException {
+		//Explicit wait
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement expectedMsg=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='heading3']")));
+		
+		String ExpectedText = expectedMsg.getText();
 		if (ExpectedText.equalsIgnoreCase("Customer Registered Successfully!!!")) {
 			customerID=driver.findElement(By.xpath("//*[@id=\"customer\"]/tbody/tr[4]/td[2]")).getText();
 			return true;
