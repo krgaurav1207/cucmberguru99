@@ -9,11 +9,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.myprojects.utilities.CoreMethods;
 import com.myprojects.utilities.ReadExcelSheetData;
 
-public class AddAccountPageObject {
+public class AddAccountPageObject extends CoreMethods {
 	WebDriver driver;
-	public static String accountID=null;
 	
 	public AddAccountPageObject(WebDriver driver) {
 		this.driver=driver;
@@ -35,15 +35,13 @@ public class AddAccountPageObject {
 	
 	public void addNewAccount() {
 		try {
-//			 if(Guru99AddCustomerPageObjects.customerID.equals(null)) {
-//				 String custID = ReadExcelSheetData.getMapData("CustomerID");
-//				 driver.findElement(By.cssSelector("input[name='cusid']")).sendKeys(custID);
-//			 }else {
-//				 driver.findElement(By.cssSelector("input[name='cusid']")).sendKeys(Guru99AddCustomerPageObjects.customerID);
-//			 }
-			String custID = ReadExcelSheetData.getMapData("CustomerID");
-			 driver.findElement(By.cssSelector("input[name='cusid']")).sendKeys(custID); 
-			
+			 if(CoreMethods.isNullOrEmpty(customerID)) {
+				 String custID = ReadExcelSheetData.getMapData("CustomerID");
+				 driver.findElement(By.cssSelector("input[name='cusid']")).sendKeys(custID);
+			 }else {
+				 driver.findElement(By.cssSelector("input[name='cusid']")).sendKeys(customerID);
+			 }
+						
 			 String acType = ReadExcelSheetData.getMapData("AccountType");
 			 driver.findElement(By.cssSelector("select[name='selaccount']")).sendKeys(acType);
 			 

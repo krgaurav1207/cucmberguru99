@@ -3,10 +3,11 @@ package com.myprojects.pageobjects;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class Guru99LoginPageObjects {
 	 WebDriver driver;
-
+	 
 	 public Guru99LoginPageObjects(WebDriver driver) {
 		 this.driver =driver;
 	 }
@@ -45,6 +46,7 @@ public class Guru99LoginPageObjects {
 	public  void enterUserName() {
 		try {
 			driver.findElement(By.name("uid")).sendKeys("mngr256556");
+//			userID.sendKeys("mngr256556");
 		}
 		catch(Exception e) {
 			e.printStackTrace(System.out);
@@ -55,6 +57,7 @@ public class Guru99LoginPageObjects {
 	public  void enterPassword() {
 		try {
 			driver.findElement(By.name("password")).sendKeys("hEzUhYz");
+//			password.sendKeys("hEzUhYz");
 		}
 		catch(Exception e) {
 			e.printStackTrace(System.out);
@@ -65,6 +68,7 @@ public class Guru99LoginPageObjects {
 	public  void Login() {
 		try {
 			driver.findElement(By.name("btnLogin")).click();
+//			loginBtn.click();
 		}
 		catch(Exception e) {
 			e.printStackTrace(System.out);

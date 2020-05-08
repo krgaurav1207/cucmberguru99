@@ -15,7 +15,6 @@ import com.myprojects.utilities.ReadExcelSheetData;
 
 public class Guru99AddCustomerPageObjects extends ReadExcelSheetData{
 	WebDriver driver;
-	public static String customerID=null;
 	 public Guru99AddCustomerPageObjects(WebDriver driver) {
 		 this.driver =driver;
 	 }
